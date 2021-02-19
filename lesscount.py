@@ -21,7 +21,7 @@ less_count(arr)
 
 def test_performance():
     """
-        Function to check the performance of generate_prime function for 1000, 10000, 100000 prime numbers
+        Function to check the performance offollowing test cases
     """
     test_cases = [[10000,20000,3000,40000],[10000,4,5,300]]
 
