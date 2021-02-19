@@ -30,7 +30,7 @@ def test_performance():
         result =  less_count(test_case)
         end = timer() - start
         print("-"*20)
-        print("Time Taken for gnerating ", test_case, " prime numbers: ", end)
+        print("Time Taken for gnerating ", test_case, " test case: ", end)
         print("-"*20)
 
 
