@@ -24,7 +24,7 @@ else:
 """def test():
     
     result =  palindrome(10)
-    assert len(primes) == 10
+    assert len(result) == 10
     assert yay in result
     assert lost not in result
     print("All test passed.")"""
