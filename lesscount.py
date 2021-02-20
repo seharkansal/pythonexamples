@@ -13,8 +13,10 @@ def less_count(arr):
     for i in arr_new:
         print(i)
 
-arr=[4,5,2,3]
-less_count(arr)
+def test():
+    arr=[2,4,1,5]
+    assert less_count(arr)==[1,2,0,3]
+    print("passed")
 
 
 
@@ -35,5 +37,7 @@ def test_performance():
 
 
 if __name__=="__main__":
-    #test()
+    arr=[4,5,2,3]
+    less_count(arr)
+    test()
     test_performance()  
