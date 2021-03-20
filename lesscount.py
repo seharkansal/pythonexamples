@@ -19,8 +19,6 @@ def test():
     print("passed")
 
 
-
-
 def test_performance():
     """
         Function to check the performance offollowing test cases
