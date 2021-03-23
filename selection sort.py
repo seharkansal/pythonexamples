@@ -13,16 +13,16 @@ def selection_sort(L):
         L[i], L[min_index] = L[min_index], L[i]
 
 
-def test_selectionSort():
-    L=[3,1,2,4]
-    
-    assert selection_sort(L)==[1,2,3,4]
+'''def test_selectionSort():
+    L = [3,1,2,4]
 
-    print("all test passed")
+    assert selection_sort(L) == [1,2,3,4]
+
+    print("all test passed")'''
 
 
 if __name__=="__main__":
-    L=[3,1,2,4,5]
+    L = [3,1,2,4,5]
     selection_sort(L)
     print(L)
-    test_selectionSort()
+    #test_selectionSort()
