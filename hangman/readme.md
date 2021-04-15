@@ -8,3 +8,6 @@ To run the game:
 ~~~
 python3 hangman_code.py
 ~~~
+
+Author: Sehar Kansal
+        
