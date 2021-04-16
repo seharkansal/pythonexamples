@@ -4,7 +4,9 @@ def main():
     user=input("ENTER YOUR NAME:")
     print("OKAY",user," LETS PLAY HANGMAN!!!!")
 
-    words = ["hangman","chairs","backpack","bodywash","clothing","computer","python","program","glasses","sweatshirt","sweatpants","mattress","friends","clocks","biology","algebra","suitcase","knives","ninjas","shampoo"]
+    with open("words.txt","r") as file:
+        allText=file.read()
+        words=list(map(str,allText.split()))
     test_word = random.choice(list(words))
     underscore = '_'
     lives=5
@@ -14,6 +16,7 @@ def main():
     print(*guessed_word,sep = " ")
     print()
     print("total lives:",lives)
+
     while True:
         print('==='*20)
         
@@ -38,11 +41,7 @@ def main():
                 index=guessed_word.index(underscore)
                 hint=test_word[index]
                 print("trying guessing:",hint)
-
-                
-                
-                    
-                
+      
             if lives==0:
                 print()
                 print("OOPS! YOU LOOSE..BETTER LUCK NEXT TIME...") 
@@ -52,7 +51,7 @@ def main():
         count1 = guessed_word.count(underscore)
         if count1 == 0:
             print()
-            print("GOOD GAME!",user)  
+            print("GOOD GAME",user,"!")  
             break 
 
 
