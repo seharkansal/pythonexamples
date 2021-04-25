@@ -6,7 +6,7 @@ def main():
 
     with open("words.txt","r") as file:
         allText=file.read()
-        words=list(map(str,allText.split()))
+        words=allText.split()
     test_word = random.choice(list(words))
     underscore = '_'
     lives=5
