@@ -2,6 +2,9 @@
 import random
 
 def main():
+    #function to implement the popular game rock paper scissors where 2 players choose either paper,rock or scissors 
+    # and we check if they chose a valid object, 
+    # if both player choose the same object its a tie, paper beats rock, rock beats scissors and scissors beat paper
     while True:
 
         print("HELLO..")
@@ -49,7 +52,7 @@ def main():
         elif(user=="S" and machine=="R"):
             print("machine's turn:",machine)
             print("machine won")
-
+# ask user for the final choice whether he wants to pla again or not
         print("PLAY AGAIN?")
         print("[Y]/[N]") 
     
