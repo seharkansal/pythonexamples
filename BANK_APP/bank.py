@@ -1,9 +1,7 @@
-#three classes account, customer and bank, where a bank can have many
-#customers and a customer can have many accounts 
-#customer can add or delete his account
-#bank can add or delete account of the customer
-#account class for user to deposit money,
-#withdraw money and check balance
+# A bank class to add and delete customers
+# it can can add or delete accounts for a specific customer
+# aslo can deposit and withdraw money from an specific account of a customer
+
 from unittest import TestCase
 from customer import Customer
 
@@ -126,14 +124,17 @@ class Bank_test(TestCase):
 
     def test_add_customer(self):
         bank = Bank()
+        # initially number of customers are 0 
+        #i.e length of dictionary 
         self.assertEqual(0,len(bank.customers))
 
         bank.add_customer("sehar")
+        #after aading one accunt, lenght is now 1
         self.assertEqual(1,len(bank.customers))
 
     def test_delete_customer(self):
         bank = Bank()
-        bank = Bank()
+        
         self.assertEqual(0,len(bank.customers))
 
         bank.add_customer("sehar")

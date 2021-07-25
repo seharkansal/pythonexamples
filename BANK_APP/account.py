@@ -1,4 +1,8 @@
+# An account class which can deposit deposit money, withdraw money 
+# and get balance in the account
+
 from unittest import TestCase
+
 class Account:
     def __init__(self,account_number,account_type):
         '''
@@ -57,17 +61,17 @@ class Account:
 
 
 class Account_test(TestCase):
-    
-    
 
     def test_deposit(self):
         account = Account(1,"savings")
-
+        #initially the account balance is 0
         self.assertEqual(0,account.balance)
         account.deposit(500)
+        #after depositng 500, balance becomes 500
         self.assertEqual(500,account.balance)   
 
         account.deposit(-200)
+        #invalid entry, balance remians the same
         self.assertEqual(500,account.balance)
 
         account.deposit("lassi")

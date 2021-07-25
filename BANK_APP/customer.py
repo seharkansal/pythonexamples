@@ -1,3 +1,6 @@
+# A customer class which can add or delete accounts in a bank
+# and deposit money to account or withdraw money from account
+
 from unittest import TestCase
 from account import Account
 
@@ -13,7 +16,7 @@ class Customer:
        # empty dictionary of number of accounts
        self.accounts = {}
        self.name = name
-       self.balance=0
+       
        self.new_account_number = 1
 
     def add_account(self,account_type):
@@ -87,9 +90,11 @@ class Customer_test(TestCase):
 
     def test_add_account(self):
         customer = Customer("sehar")
+        #initially customer accounts are 0
         self.assertEqual(0,len(customer.accounts) )
 
         customer.add_account("savings")   
+        #after adding one account, length of dictionary becomes 1
         self.assertEqual(1,len(customer.accounts))
         
  
@@ -105,15 +110,9 @@ class Customer_test(TestCase):
         self.assertEqual(0,len(customer.accounts))
 
 
-    def test_deposit_to_account(self):
-        customer = Customer("sehar")
-        self.assertEqual(0,len(customer.accounts) )
+   
 
-        customer.add_account("savings")   
-        self.assertEqual(1,len(customer.accounts))
-
-        customer.deposit_to_account(1,500)
-        self.assertEqual(500,customer.balance)
+        
 
 
   
